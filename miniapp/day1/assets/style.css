@@ -1,0 +1,45 @@
+body {
+	background-color: #f1f1f1;
+}
+p,article {
+	margin: 0 !important;
+	padding: 0 !important;
+}
+.br-m {
+	border-radius: 10px;
+}
+
+
+
+/*background*/
+.bk-white {
+	background-color: #ffffff;
+}
+.bk-lightGray {
+	background-color: #eaeaea;
+}
+
+
+
+/*shadow*/
+.shadow-black {
+	box-shadow: 5px 5px 15px #00000052;
+}
+
+
+
+/*color*/
+.color-accent {
+	color: #ff00a3;
+}
+
+
+
+.active {
+	background-color: #ff00a3;
+	color: #ffffff;
+}
+.nonactive {
+	background-color: #ffffff;
+	color: black;
+}
