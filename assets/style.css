@@ -1,0 +1,19 @@
+.container-fluid {
+	max-width: 900px;
+	margin: auto;
+}
+.fsize120 {
+	font-size: 120%;
+}
+.color-accent {
+	color: #ff0068 !important;
+}
+a {
+	color: #00a1b3;
+}
+iframe {
+	-moz-transform: scale(1,1);
+-webkit-transform: scale(1,1);
+-o-transform: scale(1,1);
+-ms-transform: scale(1,1);
+}
