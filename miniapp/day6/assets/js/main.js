@@ -1,32 +1,34 @@
-var dheight = $(document).innerHeight();
-var wheight = $(window).innerHeight();
-
-const log = document.getElementById('log');
-const log2 = document.getElementById('log2');
-
-let nowscrollTop = document.getElementById("body").scrollTop;
-
-
-log.textContent = `scrollTop:${nowscrollTop}`;
-
-window.addEventListener('scroll', () => {
-
-  let scrollTop = document.scrollingElement.scrollTop;
-  log.textContent = `scrollTop:${scrollTop}`;
-
-  var login = log.innerHeight();
-  var now = scrollTop - login;
-  var tage = (now / dheight) * 100;
-  console.log(now);
-  console.log(dheight);
-  var parcent = Math.round(tage);
-  log.textContent = `最後まで:${parcent}%`;
-
-
-  if (scrollTop > 200) {
-    document.getElementById("body").classList.add("bk-hah");
-  } else {
-    document.getElementById("body").classList.remove("bk-hah");
-  }
-  
-}, false);
+/* instagram */
+$(function () {
+    try {
+        this.name = "via_jpn";
+        $.ajax('https://www.instagram.com/' + this.name + '/', {
+            timeout: 2000,
+            datatype: 'html'
+        }).then(function (data) {
+            json_string = data.split("window._sharedData = ")[1];
+            json_string = json_string.split("};</script>")[0] + "}";
+            this.Arrya_data = JSON.parse(json_string);
+            let datas = this.Arrya_data.entry_data.ProfilePage[0].graphql.user.edge_owner_to_timeline_media.edges;
+            for (i in datas) {
+                url = datas[i].node.display_url;
+                if(i == 0) {
+                    this.html = `
+                    <div class="carousel-item active">
+                    <img src="${url}" class="card-img-top">
+                    </div>
+                    `;
+                } else {
+                    this.html = `
+                    <div class="carousel-item">
+                    <img src="${url}" class="card-img-top">
+                    </div>
+                    `;
+                }
+                $(".insta-card").append(this.html);
+            }
+        });
+    } catch (error) {
+        alert(error);
+    }
+})
