@@ -1,3 +1,6 @@
+// クラスの出席管理
+// 生徒の座席をタッチすると自動で出席数や出席率が表示される
+
 // 要素の取得と代入
 var members = document.getElementById('Members').children;
 var student = document.getElementById('student').children[0];

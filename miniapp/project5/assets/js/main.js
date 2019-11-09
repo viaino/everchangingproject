@@ -1,3 +1,5 @@
+// インスタグラムでAPIを使用せず、JavascriptとJqueryだけで実装！
+
 /* instagram */
 $(function () {
     try {
@@ -12,19 +14,11 @@ $(function () {
             let datas = this.Arrya_data.entry_data.ProfilePage[0].graphql.user.edge_owner_to_timeline_media.edges;
             for (i in datas) {
                 url = datas[i].node.display_url;
-                if(i == 0) {
-                    this.html = `
-                    <div class="carousel-item active">
-                    <img src="${url}" class="card-img-top">
-                    </div>
-                    `;
-                } else {
-                    this.html = `
-                    <div class="carousel-item">
-                    <img src="${url}" class="card-img-top">
-                    </div>
-                    `;
-                }
+                this.html = `
+                <div class="card">
+                    <img src="${url}" class="card-img-top" />
+                </div>
+                `;
                 $(".insta-card").append(this.html);
             }
         });

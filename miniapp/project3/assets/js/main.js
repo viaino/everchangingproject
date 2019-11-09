@@ -1,3 +1,6 @@
+// 選択した値によって表示を条件分岐
+// ついでにGoogleフォームをCSSでカスタマイズ
+
 var q1 = document.getElementById('q1');
 var q2 = document.getElementById('q2');
 var q3 = document.getElementById('q3');

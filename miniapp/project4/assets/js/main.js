@@ -1,3 +1,5 @@
+// 入力した値をjsonファイル形式でダウンロード
+
 window.onload = () => {
   var download = document.getElementById('download');
   var name = document.getElementById('name');
