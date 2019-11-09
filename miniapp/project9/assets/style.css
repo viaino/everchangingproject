@@ -1,0 +1,12 @@
+#box {
+	height: 100px;
+    width: 100px;
+    background-color: #F44336;
+    position: relative;
+    left: 0;
+	transition: 9.5s;
+}
+.active {
+	background-color: #2196F3 !important;
+    left: calc(100% - 100px) !important;
+}
