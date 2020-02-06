@@ -1,6 +1,7 @@
 /* instagram */
 $(function () {
     try {
+        // インスタのIDを入れようね
         this.name = "via_jpn";
         $.ajax('https://www.instagram.com/' + this.name + '/', {
             timeout: 2000,
